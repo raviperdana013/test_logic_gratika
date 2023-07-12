@@ -2,22 +2,22 @@
 function hitungKata($kalimat, $kata) {
     $panjangkalimat = strlen($kalimat);
     $panjangkata = strlen($kata);
-    $count = 0;
+    $a = 0;
 
     for ($i = 0; $i <= $panjangkalimat - $panjangkata; $i++) {
-        $match = true;
+        $cocok = true;
         for ($j = 0; $j < $panjangkata; $j++) {
             if ($kalimat[$i + $j] !== $kata[$j]) {
-                $match = false;
+                $cocok = false;
                 break;
             }
         }
-        if ($match) {
-            $count++;
+        if ($cocok) {
+            $a++;
         }
     }
 
-    return $count;
+    return $a;
 }
 
 // Contoh penggunaan
