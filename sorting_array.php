@@ -1,5 +1,5 @@
 <?php
-function sortArray($array) {
+function dataSorting($array) {
     $abjad = [];
     $angka = [];
     
@@ -14,14 +14,14 @@ function sortArray($array) {
     sort($abjad);
     sort($angka);
     
-    $sortedArray = array_merge($abjad, $angka);
+    $dataterurut = array_merge($abjad, $angka);
     
-    return $sortedArray;
+    return $dataterurut;
 }
 
 $array = array(12, 9, 30, 'A', 'M', 99, 82, 'J', 'N', 'B');
 
-$sortedArray = sortArray($array);
-print_r($sortedArray);
+$dataterurut = dataSorting($array);
+print_r($dataterurut);
 
 ?>
