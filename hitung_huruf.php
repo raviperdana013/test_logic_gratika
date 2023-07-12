@@ -1,14 +1,14 @@
 <?php
-function hitungHuruf($input)
+function cekAbjad($input)
 {
-    $input = str_split($input); // Mengubah input menjadi array karakter
+    $input = str_split($input);
     $count = array();
 
-    foreach ($input as $char) {
-        if (!array_key_exists($char, $count)) {
-            $count[$char] = 1;
+    foreach ($input as $inputt) {
+        if (!array_key_exists($inputt, $count)) {
+            $count[$inputt] = 1;
         } else {
-            $count[$char]++;
+            $count[$inputt]++;
         }
     }
 
@@ -19,13 +19,10 @@ function hitungHuruf($input)
     return $count;
 }
 
-// Contoh penggunaan
 $input = "MasyaAllah";
-$hasilHitung = hitungHuruf($input);
+$finalhasil = cekAbjad($input);
 echo "[";
-foreach ($hasilHitung as $char => $jumlah) {
-    echo "'".$char."':".$jumlah.", ";
+foreach ($finalhasil as $inputt => $jumlah) {
+    echo "'".$inputt."':".$jumlah.", ";
 }
 echo "]";
-
-?>
