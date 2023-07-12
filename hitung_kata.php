@@ -1,13 +1,13 @@
 <?php
-function pattern_count($text, $pattern) {
-    $textLength = strlen($text);
-    $patternLength = strlen($pattern);
+function hitungKata($kalimat, $kata) {
+    $panjangkalimat = strlen($kalimat);
+    $panjangkata = strlen($kata);
     $count = 0;
 
-    for ($i = 0; $i <= $textLength - $patternLength; $i++) {
+    for ($i = 0; $i <= $panjangkalimat - $panjangkata; $i++) {
         $match = true;
-        for ($j = 0; $j < $patternLength; $j++) {
-            if ($text[$i + $j] !== $pattern[$j]) {
+        for ($j = 0; $j < $panjangkata; $j++) {
+            if ($kalimat[$i + $j] !== $kata[$j]) {
                 $match = false;
                 break;
             }
@@ -21,9 +21,7 @@ function pattern_count($text, $pattern) {
 }
 
 // Contoh penggunaan
-$text = "ababab";
-$pattern = "aba";
-$result = pattern_count($text, $pattern);
-echo $result;
-
-?>
+$kalimat = "ababab";
+$kata = "aba";
+$hasil = hitungKata($kalimat, $kata);
+echo $hasil;
